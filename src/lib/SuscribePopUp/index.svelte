@@ -12,8 +12,8 @@
 			<input class='email-input' placeholder="Your email address" type="email" name="email" id="email" required />
 		</div>
 		<div class="form-group">
-			<input type="checkbox" id="scales" name="scales" checked />
-			<label for="scales">I agree to receive this newsletter and subscribe at any time.</label>
+			<input type="checkbox" id="terms" name="terms" />
+			<label for="terms">I agree to receive this newsletter and subscribe at any time.</label>
 		</div>
             <button class="btn-submit" type="submit" >Subscribe</button>
 	</form>
@@ -71,6 +71,40 @@
         border-radius: 5px;
         border: solid 1px #A7AAC9;
     }
+
+    .form-group #terms {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 12px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+	}
+	
+    .form-group #terms:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+	}
+
+
+    .form-group #terms:checked {
+	background-color: #2D2865;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+	}
+
+
+    .form-group #terms:checked:after {
+	content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
+    }
+
     .btn-submit {
         background: #2D2865;
         border-radius: 5px;
