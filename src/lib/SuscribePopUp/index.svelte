@@ -50,23 +50,33 @@
         width: 70%;
         margin: 0;
     }
+
+    h3 {
+    	font-size: 2rem;
+	line-height: 1.6;
+	margin-bottom: .5rem;
+	}
+
     .form {
         width: 80%;
         padding: 2rem 0 4rem 0;
         display: grid;
-        grid-gap: 1rem;
+        grid-gap: 2rem;
     }
     .form .email-input {
-        width: 100%;
-        padding: 0.862rem;
+    /* cheat... need to proper fix this */ 
+        width: 90%;
+
+        padding: 1.25rem;
         border-radius: 5px;
         border: solid 1px #A7AAC9;
     }
     .btn-submit {
         background: #2D2865;
         border-radius: 5px;
-        padding: 0.862rem;
+        padding: 1.25rem;
         border: none;
+	color: white;
     }
 
 </style>

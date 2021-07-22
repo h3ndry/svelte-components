@@ -9,6 +9,7 @@
 	// ...but if the client-side router is already loaded
 	// (i.e. we came here from elsewhere in the app), use it
 	export const router = browser;
+  
 
 	// since there's no dynamic data here, we can prerender
 	// it so that it gets served as a static asset in prod
@@ -28,10 +29,11 @@
 <style>
 	.container {
 		position: relative;
-        min-height: 72vh;
-        /* background-color: red; */
-        display: grid;
-        align-content: center;
+		min-height: 72vh;
+		padding-top: 8rem;
+		/* background-color: red; */
+		display: grid;
+		align-content: center;
 	}
 
 	.oval {
@@ -43,20 +45,20 @@
 	}
 
 	.oval.oval-small {
-		height: 12rem;
-		width: 12rem;
+		height: 20.625rem;
+		width: 20.625rem;
 		background: linear-gradient(90deg, #ffd7ae, #ffb3af);
-        transform: translate(-50%,-50%);
-        top: 65%;
-        left: 30%;
+		transform: translate(-50%,-50%);
+		top: 75%;
+		left: 25%;
 	}
 
 	.oval.oval-big {
 		background: linear-gradient(45deg, #aadbff, #ffb3af);
-        top: 40%;
-        left: 60%;
-		height: 16rem;
-        transform: translate(-50%,-50%);
-		width: 16rem;
+		top: 50%;
+		left: 80%;
+		height: 30.1875rem;
+		transform: translate(-50%,-50%);
+		width: 30.1875rem;
 	}
 </style>
