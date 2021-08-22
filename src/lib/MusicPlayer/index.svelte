@@ -1,21 +1,24 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
+    import Player from './player.svelte';
 
-    const sampleObj = [{
+    const songs = [{
         name: "Acousticbreeze",
         img_url: "/static/img/acousticbreeze.jpg",
-        song_url: "bensound-acousticbreeze.mp3"
+        song_url: "bensound-acousticbreeze.mp3",
+        id: 1
         }, 
         {
         name: "Buddy",
         img_url: "/static/img/buddy.jpg",
-        song_url: "bensound-buddy.mp3"
-
+        song_url: "bensound-buddy.mp3",
+        id: 2
         }, 
         {
         name: "Happyrock.jpg",
         img_url: "/static/img/happyrock.jpg",
-        song_url: "bensound-happyrock.mp3"
+        song_url: "bensound-happyrock.mp3",
+        id: 3
         }, {
         name: "Memories",
         img_url: "/static/img/memories.jpg",
@@ -35,10 +38,35 @@
 	}
 </script>
 
-<div class="player-list">
 
-hey I am a player
+<div class="player-list">
+<div class="wrapper">
+    
+{#each songs as song (song.id)}
+
+ <Player />
+
+{/each}
+
 
 </div>
+</div>
 
-<style></style>
+<style>
+
+
+
+    .player-list {
+        min-height: 29.375rem;
+        padding: 4rem 0; }
+
+    .wrapper{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 1rem;
+        /* grid-column-gap: 1rem; */
+        /* grid-row-gap: 2rem; */
+        max-width: 65rem }
+
+</style>
