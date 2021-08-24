@@ -1,28 +1,29 @@
 <script lang="ts">
 	import { spring } from 'svelte/motion';
+
     import Player from './player.svelte';
 
     const songs = [{
         name: "Acousticbreeze",
-        img_url: "/static/img/acousticbreeze.jpg",
-        song_url: "bensound-acousticbreeze.mp3",
+        img: "/static/img/acousticbreeze.jpg",
+        song_url: "/static/sound/bensound-acousticbreeze.mp3",
         id: 1
         }, 
         {
         name: "Buddy",
-        img_url: "/static/img/buddy.jpg",
-        song_url: "bensound-buddy.mp3",
+        img: "/static/img/buddy.jpg",
+        song_url: "/static/sound/bensound-buddy.mp3",
         id: 2
         }, 
         {
         name: "Happyrock.jpg",
-        img_url: "/static/img/happyrock.jpg",
-        song_url: "bensound-happyrock.mp3",
+        img: "/static/img/happyrock.jpg",
+        song_url: "/static/sound/bensound-happyrock.mp3",
         id: 3
         }, {
         name: "Memories",
-        img_url: "/static/img/memories.jpg",
-        song_url: "bensound-memories.mp3"
+        img: "/static/img/memories.jpg",
+        song_url: "/static/sound/bensound-memories.mp3"
 
         }]
 
@@ -38,14 +39,13 @@
 	}
 </script>
 
-
 <div class="player-list">
 <div class="wrapper">
     
 {#each songs as song (song.id)}
 
- <Player />
-
+ <Player song={song!} />
+ <img src={song.img} alt=""/>
 {/each}
 
 
