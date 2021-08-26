@@ -1,14 +1,18 @@
 <script charset="utf-8">
+  export let name;
+  export let img;
+  export let song_url;
+
 	
 </script>
 
 <div class="player">
 
 	<div class="song-img">
-		song image
+		<img src={img} alt=""/>
 	</div>
 
-	<h3 class="artist-name">Artist Name</h3>
+	<h3 class="artist-name">{name}</h3>
 	<h3 class="song-name">Song Name</h3>
 
 	<span class="icon">I</span>

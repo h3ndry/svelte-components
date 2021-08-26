@@ -45,8 +45,8 @@
     
 {#each songs as song (song.id)}
 
- <Player song={song!} />
- <img src={song.img} alt=""/>
+ <Player {...song} />
+
 {/each}
 
 
