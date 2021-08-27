@@ -12,8 +12,8 @@
 		<img src={img} alt=""/>
 	</div>
 
-	<h3 class="artist-name">{name}</h3>
-	<h3 class="song-name">Song Name</h3>
+	<h3 class="song-name">{name}</h3>
+	<h3 class="artist-name">artist name</h3>
 
 	<span class="icon">I</span>
 	<span class="icon">I</span>
@@ -72,12 +72,12 @@
     .player {
 
         display: grid;
-        grid-template-columns: 5.25rem 1rem 2fr 1fr;
+        grid-template-columns: 8.25rem 1rem 2fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-column-gap: 1.5rem;
 
-        min-height: 8rem;
-        padding: .5rem 1rem;
+        height: 8rem;
+        padding: .8rem;
         border-radius: 10px;
         background: #282828 }
         
@@ -91,17 +91,18 @@
         justify-content: center;
         align-content: center;
 
-        width: 5.25rem;
-        height: 5.25rem;
+        width: 8rem;
+        height: 8rem;
         position: relative;
         border-radius: 15px;
         overflow: hidden;
         background: #222 }
     
     .song-img img {
-        width: 110%;
-        transform: translateX(-5%);
+        /* width: 110%; */
+        /* transform: translateX(-5%); */
     }
+
     .song-image .overlay {
         position: absolute;
         width: 5.25rem;
@@ -132,18 +133,19 @@
         margin: 0;
         /* opacity: .8; */
         /* background-color: var(--bg-color-1); */
-        align-self: center;
-        grid-column: 2 / span 2; }
+	text-transform: capitalize;
+        grid-column: 2 / span 2;
+     }
 
-    /* .song-name { */
-    /*     /1* align-self: center; *1/ */
-    /*     /1* justify-self: right *1/ } */
+    .song-name {
+        /* align-self: center; */
+        align-self: end;
+    }
 
-    /* .artist-name { */
-    /*     /1* align-self: center; *1/ */
-    /*     /1* align-items: bottom; *1/ */
-        
-    /*    } */
+    .artist-name {
+        /* align-items: bottom; */
+	font-weight: 400;
+       }
 
     .icon {
         height: 1.5rem;
