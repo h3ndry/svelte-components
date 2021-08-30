@@ -3,6 +3,19 @@
   export let img;
   export let song_url;
 
+  function play(el) {
+	 el.play() 
+  }
+
+  function pause(el) {
+	  el.pause()
+  }
+
+  function handleClick(event) {
+	  el.pause()
+  }
+
+
 	
 </script>
 
@@ -18,8 +31,17 @@
 	<span class="icon">I</span>
 	<span class="icon">I</span>
 
-	<figure class="media-controller">
-	<audio src=""></audio>	
+	<figure on:click={handleClick} class="media-controller">
+
+         <audio>
+	 <track kind="captions" />
+             <source
+                src={song_url}
+                type="audio/ogg"
+                kind="caption"
+             />
+            Your browser does not support the audio element.
+        </audio> 
 
 	<svg
 	   xmlns="http://www.w3.org/2000/svg"
